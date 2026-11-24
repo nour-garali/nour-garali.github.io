@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nour Garali — Software Engineering student focused on software development and applied AI.">
+<title>Nour Garali — Software Engineer</title>
+<style>
+:root{
+  --paper:#f7f8f6;--white:#fff;--ink:#202a32;--muted:#68747d;
+  --line:#e3e8e5;--accent:#496d68;--accent-soft:#edf3f0;
+  --serif:Georgia,"Times New Roman",serif;--sans:Inter,Arial,sans-serif;
+  --width:1040px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+.wrap{width:min(var(--width),calc(100% - 48px));margin:auto}
+header{height:76px;border-bottom:1px solid var(--line);background:rgba(247,248,246,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
+nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font:600 20px var(--serif);letter-spacing:.02em}
+.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:30px}
+.nav-right a{font-size:13px;color:var(--muted)}
+.nav-right a:hover{color:var(--ink)}
+.lang{border:1px solid var(--line);background:var(--white);padding:6px 11px;border-radius:4px;color:var(--ink);font-size:12px;cursor:pointer}
+.hero{padding:100px 0 84px;display:grid;grid-template-columns:1fr 245px;gap:65px;align-items:center}
+.overline{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font:normal clamp(42px,6vw,65px)/1.12 var(--serif);letter-spacing:-.035em;margin:20px 0 22px}
+h1 span{color:var(--accent)}
+.intro{max-width:680px;font-size:17px;color:#58646c;line-height:1.85}
+.hero-links{display:flex;align-items:center;gap:22px;margin-top:30px;flex-wrap:wrap}
+.button{display:inline-block;padding:10px 17px;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:white;font-size:13px;font-weight:600}
+.button:hover{background:#3d5e59;color:white}
+.text-link{font-size:13px;font-weight:600;color:var(--accent);border-bottom:1px solid #b8c9c4;padding-bottom:2px}
+.profile{border-left:1px solid var(--line);padding-left:27px}
+.initials{width:68px;height:68px;border:1px solid #cbd7d2;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);font:26px var(--serif);margin-bottom:18px}
+.profile strong{display:block;font:20px var(--serif);font-weight:normal}
+.profile small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.profile-meta{border-top:1px solid var(--line);margin-top:20px;padding-top:13px;color:var(--muted);font-size:12px}
+.profile-meta div{margin:5px 0}
+section{padding:58px 0;border-top:1px solid var(--line)}
+.section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h2{font:normal 32px/1.2 var(--serif);letter-spacing:-.02em;margin:8px 0 25px}
+h3{font-size:16px;font-weight:600;margin:0 0 7px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:65px}
+.about-grid p{margin:0 0 13px;color:#5f6b72}
+.skills-title{font-size:13px;font-weight:600;margin-bottom:12px}
+.skill-list{display:flex;flex-wrap:wrap;gap:7px}
+.skill{background:var(--white);border:1px solid var(--line);padding:5px 9px;border-radius:3px;font-size:12px;color:#526068}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 34px}
+.project{padding:23px 0 25px;border-top:1px solid var(--line)}
+.project-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.project h3{font:normal 21px var(--serif);margin:0}
+.project-type{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.project p{font-size:13px;color:#667179;margin:10px 0 11px;line-height:1.75}
+.tech{font-size:11px;color:#536b66}
+.project a{display:inline-block;margin-top:12px;font-size:12px;color:var(--accent);font-weight:600}
+.timeline{border-top:1px solid var(--line)}
+.entry{display:grid;grid-template-columns:175px 1fr;gap:25px;padding:19px 0;border-bottom:1px solid var(--line)}
+.entry time{font-size:12px;color:var(--accent);font-weight:600}
+.entry p{margin:3px 0 0;color:#667179;font-size:13px}
+.education{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:32px}
+.edu-item{padding-top:15px;border-top:1px solid var(--line)}
+.edu-item p{margin:4px 0;color:var(--muted);font-size:13px}
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.award{padding:16px;background:var(--white);border:1px solid var(--line);border-radius:3px}
+.award strong{display:block;font-size:13px;font-weight:600}
+.award span{font-size:12px;color:var(--muted)}
+.contact-panel{display:flex;justify-content:space-between;align-items:center;gap:30px;background:#eef2ef;border:1px solid #dfe7e2;padding:30px}
+.contact-panel h2{margin:7px 0;font-size:29px}
+.contact-panel p{margin:0;color:var(--muted);font-size:13px}
+.contact-links{display:flex;gap:17px;flex-wrap:wrap}
+.contact-links a{font-size:13px;color:var(--accent);font-weight:600}
+footer{padding:25px 0 35px;color:#849087;font-size:11px;display:flex;justify-content:space-between}
+[data-fr]{display:none}
+body.fr [data-en]{display:none}
+body.fr [data-fr]{display:initial}
+@media(max-width:720px){
+ .wrap{width:min(100% - 34px,var(--width))}
+ header{height:66px}.nav-right{gap:14px}.nav-right a{display:none}
+ .hero{padding:65px 0 55px;grid-template-columns:1fr;gap:35px}
+ .profile{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;display:grid;grid-template-columns:68px 1fr;column-gap:17px}
+ .initials{grid-row:span 2;margin:0}.profile-meta{grid-column:1/-1}
+ .about-grid,.project-grid,.education{grid-template-columns:1fr;gap:18px}
+ .entry{grid-template-columns:1fr;gap:3px}
+ .awards{grid-template-columns:1fr 1fr}
+ .contact-panel{align-items:flex-start;flex-direction:column;padding:24px}
+}
+@media(max-width:420px){.awards{grid-template-columns:1fr}h1{font-size:43px}}
+</style>
+</head>
+<body>
+<header><nav class="wrap">
+<a class="logo" href="#">Nour Garali<span>.</span></a>
+<div class="nav-right">
+<a href="#about"><span data-en>About</span><span data-fr>Profil</span></a>
+<a href="#projects"><span data-en>Projects</span><span data-fr>Projets</span></a>
+<a href="#experience"><span data-en>Experience</span><span data-fr>Parcours</span></a>
+<a href="#contact"><span data-en>Contact</span><span data-fr>Contact</span></a>
+<button class="lang" id="langBtn">FR</button>
+</div></nav></header>
+<main>
+<div class="wrap hero">
+<div>
+<div class="overline"><span data-en>Software Engineering · Applied AI</span><span data-fr>Génie logiciel · IA appliquée</span></div>
+<h1><span data-en>Thoughtful software.<br><span>Meaningful impact.</span></span><span data-fr>Des logiciels bien conçus.<br><span>Un impact concret.</span></span></h1>
+<p class="intro"><span data-en>I’m Nour, a third-year Software Engineering student at ITBS in Tunisia. I build web and mobile applications, develop backend services and deployment workflows, and explore practical uses of generative AI.</span><span data-fr>Je suis Nour, élève-ingénieure en troisième année de Génie Logiciel à l’ITBS en Tunisie. Je développe des applications web et mobiles, des services backend et des processus de déploiement, tout en explorant les usages concrets de l’IA générative.</span></p>
+<div class="hero-links"><a class="button" href="#projects"><span data-en>View selected work</span><span data-fr>Voir mes projets</span></a><a class="text-link" href="mailto:nour.garali@itbs.tn">nour.garali@itbs.tn ↗</a></div>
+</div>
+<aside class="profile">
+<div class="initials">NG</div><div><strong>Nour Garali</strong><small><span data-en>Software Engineering Student</span><span data-fr>Élève-ingénieure en Génie Logiciel</span></small></div>
+<div class="profile-meta"><div>Nabeul, Tunisia</div><div><span data-en>Final-year internship · 6 months</span><span data-fr>Stage de fin d’études · 6 mois</span></div><div><span data-en>Available from mid-January 2027</span><span data-fr>Disponible à partir de mi-janvier 2027</span></div></div>
+</aside>
+</div>
+
+<section id="about"><div class="wrap">
+<div class="section-label">01 — <span data-en>Profile</span><span data-fr>Profil</span></div><h2><span data-en>A little about me</span><span data-fr>Quelques mots sur moi</span></h2>
+<div class="about-grid">
+<div><p><span data-en>I enjoy taking a product from an idea to a working application: understanding needs, designing features, building APIs and interfaces, connecting data, testing and preparing deployment. My projects have given me experience across different stacks and development environments.</span><span data-fr>J’aime faire évoluer un produit de l’idée à une application fonctionnelle : comprendre les besoins, concevoir les fonctionnalités, développer les API et les interfaces, connecter les données, tester et préparer le déploiement. Mes projets m’ont permis de travailler avec plusieurs technologies et environnements de développement.</span></p>
+<p><span data-en>I’m especially interested in substantial software projects that combine strong engineering foundations with useful AI capabilities.</span><span data-fr>Je suis particulièrement intéressée par les projets logiciels ambitieux qui associent de bonnes pratiques d’ingénierie à des fonctionnalités d’IA utiles.</span></p></div>
+<div><div class="skills-title"><span data-en>Technologies & tools</span><span data-fr>Technologies & outils</span></div><div class="skill-list">
+<span class="skill">Python</span><span class="skill">C# / .NET</span><span class="skill">Java / Spring Boot</span><span class="skill">JavaScript / TypeScript</span><span class="skill">Next.js</span><span class="skill">Node.js / Express</span><span class="skill">Flutter</span><span class="skill">Angular</span><span class="skill">PostgreSQL</span><span class="skill">MongoDB</span><span class="skill">Docker</span><span class="skill">GitHub Actions</span><span class="skill">LLM APIs</span><span class="skill">TensorFlow / Keras</span><span class="skill">GCP</span>
+</div></div></div></div></section>
+
+<section id="projects"><div class="wrap">
+<div class="section-label">02 — <span data-en>Selected work</span><span data-fr>Projets sélectionnés</span></div><h2><span data-en>Projects</span><span data-fr>Projets</span></h2>
+<div class="project-grid">
+<article class="project"><div class="project-head"><h3>Retenza Connect</h3><span class="project-type">Internship</span></div><p><span data-en>A digital loyalty platform for local businesses, combining a Flutter mobile app, Next.js dashboard and Node.js API. Includes QR-based customer onboarding, configurable loyalty programs and Apple Wallet / Google Wallet integration.</span><span data-fr>Plateforme de fidélisation digitale pour commerces locaux, combinant une application Flutter, un tableau de bord Next.js et une API Node.js. Elle comprend l’inscription par QR code, des programmes de fidélité configurables et l’intégration d’Apple Wallet et Google Wallet.</span></p><div class="tech">Flutter · Next.js · Node.js · MongoDB Atlas · Wallet APIs</div><a href="https://github.com/nour-garali/Retenza" target="_blank" rel="noopener">View source code ↗</a></article>
+<article class="project"><div class="project-head"><h3>LearnyKido</h3><span class="project-type">Award-winning</span></div><p><span data-en>An educational platform that creates personalized animated stories from a behavior or learning objective, using AI-generated scripts, images and voice.</span><span data-fr>Plateforme éducative qui crée des histoires animées personnalisées à partir d’un comportement ou d’un objectif pédagogique, grâce à la génération par IA de scénarios, d’images et de voix.</span></p><div class="tech">C# · ASP.NET Core · Python · Generative AI · GCP</div><a href="https://github.com/nour-garali/LearnyKido-ASPNet" target="_blank" rel="noopener">View source code ↗</a></article>
+<article class="project"><div class="project-head"><h3>AI Focus Tracker</h3><span class="project-type">AI / Computer Vision</span></div><p><span data-en>A focus-monitoring platform featuring webcam-based gaze detection, a real-time dashboard, live meetings and AI-generated meeting minutes.</span><span data-fr>Plateforme de suivi de la concentration avec détection du regard par webcam, tableau de bord en temps réel, réunions live et génération de comptes rendus par IA.</span></p><div class="tech">TensorFlow · MediaPipe · Next.js · Groq · PostgreSQL</div><a href="https://github.com/nour-garali/AIFocus_Tracker" target="_blank" rel="noopener">View source code ↗</a></article>
+<article class="project"><div class="project-head"><h3>PCCL</h3><span class="project-type">Licence project</span></div><p><span data-en>A local-governance platform connecting citizens with local councils, with visit scheduling, email invitations, report submission and request tracking.</span><span data-fr>Plateforme de gouvernance locale reliant les citoyens aux conseils locaux, avec planification de visites, invitations par e-mail, dépôt de rapports et suivi des demandes.</span></p><div class="tech">Flask · PostgreSQL · React · Docker</div></article>
+<article class="project"><div class="project-head"><h3>Orelivya Clinic</h3><span class="project-type">Full Stack</span></div><p><span data-en>A clinic-management web application for managing patients and appointments, supported by automated tests and a deployment pipeline.</span><span data-fr>Application web de gestion des patients et des rendez-vous d’une clinique, avec tests automatisés et pipeline de déploiement.</span></p><div class="tech">Angular · Spring Boot · Docker · GitHub Actions</div><a href="https://github.com/nour-garali/JEEClinic" target="_blank" rel="noopener">View source code ↗</a></article>
+<article class="project"><div class="project-head"><h3>Monex</h3><span class="project-type">Mobile application</span></div><p><span data-en>A mobile application for tracking income, expenses and monthly budgets, with a clear balance overview.</span><span data-fr>Application mobile de suivi des revenus, des dépenses et des budgets mensuels, avec visualisation du solde.</span></p><div class="tech">Flutter · Dart · Firebase</div><a href="https://github.com/nour-garali/DEVMOB-GestionBudgetaire" target="_blank" rel="noopener">View source code ↗</a></article>
+</div></div></section>
+
+<section id="experience"><div class="wrap">
+<div class="section-label">03 — <span data-en>Background</span><span data-fr>Parcours</span></div><h2><span data-en>Experience & education</span><span data-fr>Expérience & formation</span></h2>
+<div class="timeline">
+<div class="entry"><time>06/2026 — 08/2026</time><div><h3>Web & Mobile Development Intern · Cafee Agency</h3><p><span data-en>Contributed to Retenza Connect, a digital customer-loyalty platform for local businesses.</span><span data-fr>Contribution au développement de Retenza Connect, une plateforme de fidélisation client pour les commerces locaux.</span></p></div></div>
+<div class="entry"><time>02/2024 — 06/2024</time><div><h3>Licence Final-Year Project Intern · Neopolis Development</h3><p><span data-en>Developed PCCL, a local-governance platform using Flask, PostgreSQL, React and Docker.</span><span data-fr>Développement de PCCL, une plateforme de gouvernance locale avec Flask, PostgreSQL, React et Docker.</span></p></div></div>
+</div>
+<div class="education">
+<div class="edu-item"><h3>Engineering Degree — Software Engineering</h3><p>IT Business School (ITBS) · 2024 — Present</p></div>
+<div class="edu-item"><h3>Bachelor’s Degree — Information Systems Development</h3><p>ISET Nabeul · 2022 — 2024</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<div class="section-label">04 — <span data-en>Recognition</span><span data-fr>Distinctions</span></div><h2><span data-en>Awards & certifications</span><span data-fr>Prix & certifications</span></h2>
+<div class="awards">
+<div class="award"><strong>1st Jury Prize</strong><span>SPID 02 · ITBS · LearnyKido · 2026</span></div>
+<div class="award"><strong>Audience Award</strong><span>SPID 02 · ITBS · LearnyKido · 2026</span></div>
+<div class="award"><strong>Workshop Co-Leader</strong><span>“Prompt Like a Pro” · Summer School 2026</span></div>
+<div class="award"><strong>Duke University</strong><span>MLOps · 2026</span></div>
+<div class="award"><strong>IBM</strong><span>Generative AI & LLMs · 2026</span></div>
+<div class="award"><strong>AWS Academy</strong><span>Generative AI Foundations · 2026</span></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact-panel">
+<div><div class="section-label"><span data-en>05 — Contact</span><span data-fr>05 — Contact</span></div><h2><span data-en>Let’s discuss a project.</span><span data-fr>Échangeons autour d’un projet.</span></h2><p><span data-en>Available for a six-month final-year internship from mid-January 2027.</span><span data-fr>Disponible pour un stage PFE de six mois à partir de mi-janvier 2027.</span></p></div>
+<div class="contact-links"><a href="mailto:nour.garali@itbs.tn">Email ↗</a><a href="https://www.linkedin.com/in/nour-garali-a5b61125b/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/nour-garali" target="_blank" rel="noopener">GitHub ↗</a></div>
+</div></div></section>
+</main>
+<footer class="wrap"><span>© 2026 Nour Garali</span><span>Software Engineering · Tunisia</span></footer>
+<script>
+const btn=document.getElementById('langBtn');
+btn.addEventListener('click',()=>{document.body.classList.toggle('fr');const fr=document.body.classList.contains('fr');document.documentElement.lang=fr?'fr':'en';btn.textContent=fr?'EN':'FR';});
+</script>
+</body></html>
